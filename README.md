@@ -1,6 +1,6 @@
-# Yupanqui Software Solution
+# <img src="https://i.ibb.co/3WtFrfJ/logo.png" title="Yupanqui Software Solutions" height="160" />
 
-Somos una empresa de desarrollo de software conformado por alumnos de EAP de Ingeniería de Software de la Facultad de Ingeniería de Sistemas e Informática interesados en buscar soluciones tecnológicas de calidad a través de un equipo profesional y preparado.
+Somos una empresa de desarrollo de software conformado por alumnos de la EAP de Ingeniería de Software de la Facultad de Ingeniería de Sistemas e Informática interesados en buscar soluciones tecnológicas de calidad a través de un equipo profesional y preparado.
 
 | Nombres | Usuarios de GitHub |
 | ------ | ------ |
@@ -20,15 +20,16 @@ Somos una empresa de desarrollo de software conformado por alumnos de EAP de Ing
 
 **SafeHome** es el proyecto basado en el reconocimiento facial para la seguridad de hogares con un alto rendimiento en la identificación de rostros captados a partir de imágenes.
 
-El siguiente sistema se encuentra en desarollo por el equipo de Yupanqui Software Solution con los siguientes roles:
+El siguiente sistema se encuentra en desarrollo por el equipo de Yupanqui Software Solutions con los siguientes roles:
 
 | Roles                                              | Nombres                                                                                                                               |
 |----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | Jefe de Proyecto                                   | La Rosa Sánchez Arellán Carlos Enrique                                                                                                |
-| Gestor de gestión de la configuración              | Tomairo Huamanraime Juan Junior                                                                                                       |
-| Bibliotecario                                      | Acuña Corahua Billy Kent                                                                                                              |
-| Comité de control de cambios                       | Huayta Molleda Luis Elías                                                                                                             |
-| Equipo de desarrollo Android                       | Acuña Corahua Billy Kent **(Líder)**<br>Montes Ramos Ruben Eduardo <br>San Bartolomé Sandoval Carlos Antonio <br>Tomairo Huamanraime Juan Junior |
-| Equipo de desarrollo del Servidor en la Nube       | Condori Guerra Kilder Renzo <br>Cornejo Pereira Cristian Daniel **(Líder)**<br>Huayta Molleda Luis Elías <br>Pezo Castilla Gustavo Armando       |
-| Equipo de desarrollo del Servidor del Raspberry Pi | La Rosa Sánchez Arellán Carlos Enrique **(Líder)**                                                                                               |
+| Jefe de la Gestión y Configuración del Software              | Acuña Corahua Billy                                                                                                        |
+| Comité de Control de Cambios                       | Huayta Molleda Luis Elías                                                                                                             |
+| Equipo de Desarrollo Android                       | Acuña Corahua Billy Kent **(Líder)**<br>Montes Ramos Ruben Eduardo <br>San Bartolomé Sandoval Carlos Antonio <br>Tomairo Huamanraime Juan Junior |
+| Equipo de Desarrollo del Servidor en la Nube       | Condori Guerra Kilder Renzo <br>Cornejo Pereira Cristian Daniel **(Líder)**<br>Huayta Molleda Luis Elías <br>Pezo Castilla Gustavo Armando       |
+| Equipo de Desarrollo del Servidor del Raspberry Pi | La Rosa Sánchez Arellán Carlos Enrique **(Líder)**                                                                                               |
+
+
 
