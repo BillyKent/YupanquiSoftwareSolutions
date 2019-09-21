@@ -1,6 +1,6 @@
 # <img src="https://i.ibb.co/3WtFrfJ/logo.png" title="Yupanqui Software Solutions" height="160" />
 
-Somos una empresa de desarrollo de software conformado por alumnos de la EAP de Ingeniería de Software de la Facultad de Ingeniería de Sistemas e Informática interesados en buscar soluciones tecnológicas de calidad a través de un equipo profesional y preparado.
+Somos una empresa de desarrollo de software conformado por alumnos de EAP de Ingeniería de Software de la Facultad de Ingeniería de Sistemas e Informática interesados en buscar soluciones tecnológicas de calidad a través de un equipo profesional y preparado.
 
 | Nombres | Usuarios de GitHub |
 | ------ | ------ |
@@ -16,20 +16,28 @@ Somos una empresa de desarrollo de software conformado por alumnos de la EAP de 
 
 ## Proyectos
 
-### Sistema Inteligente de Seguridad para Hogares (SISH)
+### Sistema Inteligente de Seguridad para el Hogar (SISH)
 
 **SafeHome** es el proyecto basado en el reconocimiento facial para la seguridad de hogares con un alto rendimiento en la identificación de rostros captados a partir de imágenes.
 
-El siguiente sistema se encuentra en desarrollo por el equipo de Yupanqui Software Solutions con los siguientes roles:
+El siguiente sistema se encuentra en desarollo por el equipo de Yupanqui Software Solutions con los siguientes roles:
 
 | Roles                                              | Nombres                                                                                                                               |
 |----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | Jefe de Proyecto                                   | La Rosa Sánchez Arellán Carlos Enrique                                                                                                |
 | Jefe de la Gestión y Configuración del Software              | Acuña Corahua Billy                                                                                                        |
 | Comité de Control de Cambios                       | Huayta Molleda Luis Elías                                                                                                             |
-| Equipo de Desarrollo Android                       | Acuña Corahua Billy Kent **(Líder)**<br>Montes Ramos Ruben Eduardo <br>San Bartolomé Sandoval Carlos Antonio <br>Tomairo Huamanraime Juan Junior |
-| Equipo de Desarrollo del Servidor en la Nube       | Condori Guerra Kilder Renzo <br>Cornejo Pereira Cristian Daniel **(Líder)**<br>Huayta Molleda Luis Elías <br>Pezo Castilla Gustavo Armando       |
-| Equipo de Desarrollo del Servidor del Raspberry Pi | La Rosa Sánchez Arellán Carlos Enrique **(Líder)**                                                                                               |
+| Equipo de Desarrollo de Aplicación Móvil                       | Acuña Corahua Billy Kent **(Líder)**<br>Montes Ramos Ruben Eduardo <br>San Bartolomé Sandoval Carlos Antonio <br>Tomairo Huamanraime Juan Junior |
+| Equipo de Desarrollo de Servidor en la Nube       | Condori Guerra Kilder Renzo <br>Cornejo Pereira Cristian Daniel **(Líder)**<br>Huayta Molleda Luis Elías <br>Pezo Castilla Gustavo Armando       |
+| Equipo de Desarrollo de Servidor Local | La Rosa Sánchez Arellán Carlos Enrique **(Líder)**                                                                                               |
+
+### Cronograma de Actividades
+
+**SafeHome** se elaborará a base de un cronograma de actividades con el fin de realizar un seguimiento del progreso del proyecto. Se tendrá consideración sobre los días domingos como días no laborables para todo el equipo del proyecto.
+
+<img src="https://i.ibb.co/zrtNxtb/cronograma1.png" title="Cronograma"/>
+
+<img src="https://i.ibb.co/Q6WrFms/cronograma2.png" title="Cronograma2"/>
 
 
 
