@@ -1,0 +1,4 @@
+# Yupanqui Software Solutions
+## Directrices
+
+
