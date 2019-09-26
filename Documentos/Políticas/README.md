@@ -1,4 +1,0 @@
-# Yupanqui Software Solutions
-## Políticas
-
-
