@@ -20,7 +20,7 @@ Somos una empresa de desarrollo de software conformado por alumnos de EAP de Ing
 
 **SafeHome** es el proyecto basado en el reconocimiento facial para la seguridad de hogares con un alto rendimiento en la identificación de rostros captados a partir de imágenes.
 
-El siguiente sistema se encuentra en desarollo por el equipo de Yupanqui Software Solutions con los siguientes roles:
+El siguiente sistema se encuentra en desarrollo por el equipo de Yupanqui Software Solutions con los siguientes roles:
 
 | Roles                                              | Nombres                                                                                                                               |
 |----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
@@ -30,14 +30,3 @@ El siguiente sistema se encuentra en desarollo por el equipo de Yupanqui Softwar
 | Equipo de Desarrollo de Aplicación Móvil                       | Acuña Corahua Billy Kent **(Líder)**<br>Montes Ramos Ruben Eduardo <br>San Bartolomé Sandoval Carlos Antonio <br>Tomairo Huamanraime Juan Junior |
 | Equipo de Desarrollo de Servidor en la Nube       | Condori Guerra Kilder Renzo <br>Cornejo Pereira Cristian Daniel **(Líder)**<br>Huayta Molleda Luis Elías <br>Pezo Castilla Gustavo Armando       |
 | Equipo de Desarrollo de Servidor Local | La Rosa Sánchez Arellán Carlos Enrique **(Líder)**                                                                                               |
-
-### Cronograma de Actividades
-
-**SafeHome** se elaborará a base de un cronograma de actividades con el fin de realizar un seguimiento del progreso del proyecto. Se tendrá consideración sobre los días domingos como días no laborables para todo el equipo del proyecto.
-
-<img src="https://i.ibb.co/zrtNxtb/cronograma1.png" title="Cronograma"/>
-
-<img src="https://i.ibb.co/Q6WrFms/cronograma2.png" title="Cronograma2"/>
-
-
-
