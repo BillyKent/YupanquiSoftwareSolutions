@@ -1,4 +1,4 @@
 # Yupanqui Software Solutions
-## Directrices
+## Análisis
 
 
