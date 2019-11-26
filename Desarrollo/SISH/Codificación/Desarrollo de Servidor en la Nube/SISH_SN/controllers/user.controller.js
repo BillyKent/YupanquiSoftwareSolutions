@@ -8,11 +8,34 @@ exports.crearUser = async (req, res) => {
         res.status(400).send({ Error: 'Usuario Existente' });
     } else {
         const newUser = new User({});
-        newUser.nombre = req.body.nombre;
+        newUser.username = req.body.username;
         newUser.password = req.body.password;
         newUser.rol = req.body.rol;
         newUser.UserImage = req.body.UserImage;
         await newUser.save();
         res.status(200).send({ Mensaje: 'Creado' });
     }
+};
+
+exports.actualizarUser = async (req, res) => {
+    const { username } = req.params;
+    const user = {};
+    user.username = req.body.username;
+    user.password = req.body.password;
+    user.rol = req.body.rol;
+    user.UserImage = req.body.UserImage;
+
+    User.findOneAndUpdate({ username })
+        .then(user => {
+            if (!user) {
+                return res.status(404).send({
+                    message: "No se encontro usuario " + username
+                });
+            }
+            return res.send(user);
+        }).catch(err => {
+            return res.status(500).send({
+                message: "Error de actualizacion al usuario " + username
+            });
+        });
 };
