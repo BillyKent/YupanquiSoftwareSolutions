@@ -39,3 +39,21 @@ exports.actualizarUser = async (req, res) => {
             });
         });
 };
+
+exports.eliminarUsuario = async (req, res) => {
+    const { username } = req.params;
+    User.findOneAndDelete({ username })
+        .then(user => {
+            if (!user) {
+                return res.status(404).send({
+                    message: "No se encontro el usuario " + username
+                });
+            }
+            return res.status(200).send({ message: "Usuario eliminado" });
+        }).catch(err => {
+            return res.status(404).send({
+                message: "No se encontro el usuario " + username
+            });
+        });
+
+}
