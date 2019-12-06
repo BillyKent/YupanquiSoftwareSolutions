@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/accionesHogarItem"
+            android:icon="@drawable/logo_safehome"
+            android:title="Acciones del hogar" />
+        <item
+            android:id="@+id/configurarCuentaItem"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Configurar cuenta" />
+    </group>
+
+    <item
+        android:id="@+id/seccionAdministradorMenu"
+        android:title="Sección administrador">
+        <menu>
+            <item
+                android:id="@+id/gestionarHabitantesItem"
+                android:icon="@drawable/ic_menu_gestionhabitantes"
+                android:title="Gestionar habitantes" />
+
+        </menu>
+    </item>
+
+
+</menu>
