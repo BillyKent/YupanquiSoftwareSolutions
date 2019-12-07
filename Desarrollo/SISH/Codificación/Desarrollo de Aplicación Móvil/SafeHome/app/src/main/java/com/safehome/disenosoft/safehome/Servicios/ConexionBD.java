@@ -46,5 +46,62 @@ public class ConexionBD {
 
     private static String urlModificarSistema = "https://api.mlab.com/api/1/databases/safe_home/collections/sistema?apiKey=JFoAa9aNXLSup9OeTp9UwsH0vVP1w4j9&q=%s";
 	
+	
+    public Habitante ObtenerHabitante(String correo){
+        URL url;
+        HttpURLConnection urlConexion = null;
+        Habitante retorno = null;
+
+        try {
+            url = new URL(String.format(urlBuscarHabitante,URLEncoder.encode(String.format("{\"_id\": \"%s\"}",correo),"utf-8")));
+            urlConexion = (HttpURLConnection) url.openConnection();
+            urlConexion.setRequestMethod("GET");
+            urlConexion.setRequestProperty("Content-Type","application/json;charset=utf-8");
+            urlConexion.setRequestProperty("Accept","application/json");
+            urlConexion.connect();
+
+            int respuesta = urlConexion.getResponseCode();
+            InputStreamReader inputStream = null;
+
+            if(respuesta >= 200 && respuesta <400){
+                inputStream = new InputStreamReader(urlConexion.getInputStream());
+            }else{
+                inputStream = new InputStreamReader(urlConexion.getErrorStream());
+            }
+
+            BufferedReader br = new BufferedReader(inputStream);
+            String temp = null;
+            do{
+                temp = br.readLine();
+            }while (br.ready());
+
+
+            JSONArray array = new JSONArray(temp);
+
+            if(array.length() > 0){
+                JSONObject jsonObject = array.getJSONObject(0);
+
+                retorno = new Habitante(
+                        jsonObject.getString("_id"),
+                        jsonObject.getString("nombres"),
+                        jsonObject.getString("apellidos"),
+                        jsonObject.getInt("tipoCuenta"),
+                        jsonObject.getBoolean("primeraVez"),
+                        jsonObject.getString("pin"),
+                        jsonObject.getString("foto")
+                );
+            }
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }finally {
+            urlConexion.disconnect();
+        }
+        return retorno;
+    }
+
 
 }
