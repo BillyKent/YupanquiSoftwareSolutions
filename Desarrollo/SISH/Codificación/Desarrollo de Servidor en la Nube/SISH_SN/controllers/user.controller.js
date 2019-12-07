@@ -1,23 +1,6 @@
 const User = require('../models/User');
 
-exports.crearUser = async (req, res) => {
-    const { nombre } = req.body;
-
-    const user = await User.findOne({ nombre });
-    if (user) {
-        res.status(400).send({ Error: 'Usuario Existente' });
-    } else {
-        const newUser = new User({});
-        newUser.username = req.body.username;
-        newUser.password = req.body.password;
-        newUser.rol = req.body.rol;
-        newUser.UserImage = req.body.UserImage;
-        await newUser.save();
-        res.status(200).send({ Mensaje: 'Creado' });
-    }
-};
-
-exports.actualizarUser = async (req, res) => {
+exports.updateUser = async (req, res) => {
     const { username } = req.params;
     const user = {};
     user.username = req.body.username;
@@ -40,7 +23,7 @@ exports.actualizarUser = async (req, res) => {
         });
 };
 
-exports.eliminarUsuario = async (req, res) => {
+exports.deleteUser = async (req, res) => {
     const { username } = req.params;
     User.findOneAndDelete({ username })
         .then(user => {
@@ -56,4 +39,24 @@ exports.eliminarUsuario = async (req, res) => {
             });
         });
 
+}
+exports.allUsers = async (req,res) => {
+    
+    const users  = await User.find({});
+    
+    if ( users.length == 0 )
+        
+        return res.status(205).send({message:'No user found'});
+
+    return res.status(200).send(users);
+}
+
+exports.getUserByEmail = async (req,res) => {
+    
+    const user = await User.findOne({email});
+
+    if ( !user )
+        return res.status(205).send({message:'The user was not found with the email entered'}) 
+
+    return res.status(200).send(user);
 }
