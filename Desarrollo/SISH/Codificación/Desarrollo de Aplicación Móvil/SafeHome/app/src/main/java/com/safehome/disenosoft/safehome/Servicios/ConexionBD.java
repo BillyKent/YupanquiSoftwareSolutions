@@ -139,6 +139,8 @@ public class ConexionBD {
         }finally {
             urlConexion.disconnect();
         }
+
+        notificarCambiosDeHabitante(true);
     }
 
     public void CrearFotos(String correo, String nombre, String pin, List<Bitmap> fotos){
