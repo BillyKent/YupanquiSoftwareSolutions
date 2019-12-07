@@ -242,3 +242,91 @@ public class ConexionBD {
     }
 
 
+    private void eliminarHabitante(Habitante habitante){
+        URL url;
+        HttpURLConnection urlConexion = null;
+
+        try {
+            url = new URL(String.format(urlModificarHabitante,URLEncoder.encode(String.format("{\"_id\":\"%s\"}",habitante.getId()),"utf-8")));
+            urlConexion = (HttpURLConnection) url.openConnection();
+
+            urlConexion.setDoOutput(true);
+
+            urlConexion.setRequestMethod("PUT");
+            urlConexion.setRequestProperty("Content-Type","application/json;charset=utf-8");
+            urlConexion.setRequestProperty("Accept","application/json");
+
+            OutputStreamWriter  wr = new OutputStreamWriter (urlConexion.getOutputStream());
+
+            String dataString = "[]";
+
+            //dataString = String.format(dataString,habitante.getNombres(),habitante.getApellidos(),habitante.isPrimeraVez(),habitante.getPin());
+
+            wr.write(dataString);
+            wr.flush();
+            wr.close();
+
+            urlConexion.getResponseCode();
+
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (ProtocolException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            urlConexion.disconnect();
+        }
+    }
+
+    public Habitante CrearHabitante(Habitante habitante/*, List<Bitmap> fotos*/){
+        Habitante aux = ObtenerHabitante(habitante.getId());
+
+        if(aux == null){
+            crearHabitante(habitante);
+            //crearFotos(habitante.getId(),fotos);
+
+
+            return habitante;
+        }
+        return null;
+    }
+
+    private void crearHabitante(Habitante habitante){
+        URL url;
+        HttpURLConnection urlConexion = null;
+
+        try {
+            url = new URL(urlCrearHabitante);
+            urlConexion = (HttpURLConnection) url.openConnection();
+
+            urlConexion.setDoOutput(true);
+
+            urlConexion.setRequestMethod("POST");
+            urlConexion.setRequestProperty("Content-Type","application/json;charset=utf-8");
+            urlConexion.setRequestProperty("Accept","application/json");
+
+            OutputStreamWriter  wr = new OutputStreamWriter (urlConexion.getOutputStream());
+
+            String dataString = "{\"_id\": \"%s\", \"nombres\": \"%s\", \"apellidos\": \"%s\", \"tipoCuenta\": %d, \"primeraVez\": %b, \"pin\": \"%s\", \"foto\": \"%s\"}";
+
+            dataString = String.format(dataString,habitante.getId(),habitante.getNombres(),habitante.getApellidos(),habitante.getTipoCuenta(),habitante.isPrimeraVez(),habitante.getPin(),habitante.getFotoBase64());
+
+            wr.write(dataString);
+            wr.flush();
+            wr.close();
+
+            urlConexion.getResponseCode();
+
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (ProtocolException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            urlConexion.disconnect();
+        }
+    }
+
+}
