@@ -8,4 +8,13 @@
     android:fitsSystemWindows="true"
     tools:context=".RegistroActivity">
 
+    <com.safehome.disenosoft.safehome.CustomViews.NonSwipeableViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </com.safehome.disenosoft.safehome.CustomViews.NonSwipeableViewPager>
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
