@@ -139,6 +139,8 @@ public class ConexionBD {
         }finally {
             urlConexion.disconnect();
         }
+
+        notificarCambiosDeHabitante(true);
     }
 
     public void CrearFotos(String correo, String nombre, String pin, List<Bitmap> fotos){
@@ -199,4 +201,44 @@ public class ConexionBD {
             notificarCambiosDeHabitante(true);
         }
     }
+
+
+    int respuesta = 0;
+    public void AbrirPuerta(){
+        URL url;
+        HttpURLConnection urlConexion = null;
+
+        try {
+            url = new URL(String.format(urlModificarSistema,URLEncoder.encode("{\"_id\":{\"$oid\":\"5bdc0bb9fb6fc074abb59124\"}}","utf-8")));
+            urlConexion = (HttpURLConnection) url.openConnection();
+
+            urlConexion.setDoOutput(true);
+
+            urlConexion.setRequestMethod("PUT");
+            urlConexion.setRequestProperty("Content-Type","application/json;charset=utf-8");
+            urlConexion.setRequestProperty("Accept","application/json");
+
+            OutputStreamWriter  wr = new OutputStreamWriter (urlConexion.getOutputStream());
+
+            String dataString = "{ \"$set\"  : { \"instruccionCerradura\": %b } }";
+
+            dataString = String.format(dataString,true);
+
+            wr.write(dataString);
+            wr.flush();
+            wr.close();
+
+            respuesta = urlConexion.getResponseCode();
+
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (ProtocolException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            urlConexion.disconnect();
+        }
+    }
+
 
