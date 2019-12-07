@@ -57,3 +57,13 @@ exports.eliminarUsuario = async (req, res) => {
         });
 
 }
+exports.listarUsuarios = async (req, res) => {
+    User.find()
+        .then(users => {
+            return res.status(200).send(users);
+        }).catch(err => {
+            return res.status(500).send({
+                message: err.message || "Error de Servidor"
+            });
+        });
+};
