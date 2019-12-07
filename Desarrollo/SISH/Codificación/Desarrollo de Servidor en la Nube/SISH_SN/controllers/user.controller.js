@@ -40,6 +40,7 @@ exports.deleteUser = async (req, res) => {
         });
 
 }
+<<<<<<< HEAD
 exports.allUsers = async (req,res) => {
     
     const users  = await User.find({});
@@ -60,3 +61,15 @@ exports.getUserByEmail = async (req,res) => {
 
     return res.status(200).send(user);
 }
+=======
+exports.listarUsuarios = async (req, res) => {
+    User.find()
+        .then(users => {
+            return res.status(200).send(users);
+        }).catch(err => {
+            return res.status(500).send({
+                message: err.message || "Error de Servidor"
+            });
+        });
+};
+>>>>>>> c08a97b6fe0bea6c6157df7d40a8c1633d8cd552
