@@ -4,7 +4,7 @@ import time, threading, json
 
 class ConexionBD(object):
     __instancia = None
-    credenciales = 'mongodb://carloslrsa:carloslrsa1@ds145113.mlab.com:45113/safe_home'
+    credenciales = ''
     direccionFotos = 'bd_local/fotos/'
     direccionDataset = 'bd_local/dataset/'
     direccionBd = 'bd_local/bd.txt'
