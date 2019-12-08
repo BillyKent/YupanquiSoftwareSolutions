@@ -57,7 +57,7 @@ exports.eliminarUsuario = async (req, res) => {
         });
 
 }
-exports.listarUsuarios = async (req, res) => {
+exports.allUsers = async (req, res) => {
     User.find()
         .then(users => {
             return res.status(200).send(users);
@@ -67,3 +67,13 @@ exports.listarUsuarios = async (req, res) => {
             });
         });
 };
+
+exports.getUserByEmail = async (req,res) => {
+
+    const user = await User.findOne({email});
+
+    if ( !user )
+        return res.status(205).send({message:'The user was not found with the email entered'}) 
+
+    return res.status(200).send(user);
+} 
